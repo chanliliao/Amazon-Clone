@@ -72,3 +72,31 @@
   color: white;
   margin: 10px;
 }
+
+.subnav {
+  background-color: #232f3e;
+  height: 50px;
+  display: flex;
+}
+
+.subnav button {
+  background-color: #232f3e;
+  color: white;
+  padding: 0 10px;
+  margin: 5px 5px;
+  border: none;
+  font-size: 17px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.subnav span {
+  margin: 5px;
+}
+
+.subnav button:hover {
+  border: 1px solid white;
+  border-radius: 1px;
+}
