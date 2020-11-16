@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.container {
+  width: 1900px;
+  margin: auto;
+}
+
 /* Navbar */
 .navbar {
   height: 70px;
@@ -99,4 +104,26 @@
 .subnav button:hover {
   border: 1px solid white;
   border-radius: 1px;
+}
+
+/* Home */
+
+.home {
+  height: 100vh;
+  background-color: #eaeded;
+}
+
+.hero-img {
+  width: 100%;
+  z-index: -1;
+  margin-bottom: -450px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.products img {
+  width: 200px;
 }
