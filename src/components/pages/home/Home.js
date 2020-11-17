@@ -4,7 +4,7 @@ import ProductList from '../home/ProductList';
 
 function Home() {
   return (
-    <div className='home'>
+    <div className='home '>
       <div className='hero container'>
         <img
           className='hero-img'
