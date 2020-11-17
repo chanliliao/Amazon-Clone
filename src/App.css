@@ -108,7 +108,8 @@
 }
 
 /* Home */
-.home {
+.home,
+.checkout {
   background-color: #eaeded;
 }
 
@@ -158,4 +159,42 @@
 
 .product-rating {
   display: flex;
+}
+
+/* checkout */
+.checkout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.checkout-ads,
+.checkout .cart,
+.subtotal {
+  background-color: white;
+  margin: 20px;
+  padding: 5px 20px;
+}
+
+.checkout-ads {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout-ads p {
+  font-size: 20px;
+  margin: 0 20px;
+}
+.checkout-ads h2 {
+  color: #4682b4;
+  font-size: 28px;
+  margin: 0 20px;
+}
+
+.checkout button {
+  font-size: 15px;
+  width: 125px;
+  height: 40px;
+  border: 1px solid rgb(167, 167, 167);
+  border-radius: 3px;
 }
