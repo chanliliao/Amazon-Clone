@@ -3,15 +3,19 @@ import '../../App.css';
 import NavbarOption from './NavbarOption';
 import { FaSearch } from 'react-icons/fa';
 import { FaShoppingBasket } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
     <div className='navbar'>
-      <img
-        className='logo'
-        src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'
-        alt='amazon logo'
-      />
+      <Link to='/'>
+        <img
+          className='logo'
+          src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'
+          alt='amazon logo'
+        />
+      </Link>
+
       <NavbarOption title={'Hello'} sub={'Select your address'} />
       <div className='search'>
         <input className='search-input' type='text' />
@@ -19,12 +23,14 @@ function Navbar() {
       </div>
       <NavbarOption title={'Hello'} sub={'Sign In'} />
       <NavbarOption title={'Return'} sub={'&Order'} />
-      <div className='basket'>
-        <FaShoppingBasket color='white' size='2rem' />
-        <div className='basket-count'>
-          <h2>0</h2>
+      <Link to='/checkout'>
+        <div className='basket'>
+          <FaShoppingBasket color='white' size='2rem' />
+          <div className='basket-count'>
+            <h2>0</h2>
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }

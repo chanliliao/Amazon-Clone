@@ -1,4 +1,5 @@
 import React from 'react';
+import Subtotal from '../checkout/Subtotal';
 
 function Checkout() {
   return (
@@ -25,8 +26,7 @@ function Checkout() {
         </div>
         <div className='checkout-right'>
           <div className='subtotal'>
-            <h2>Subtotal ( 1 items): $14.00 </h2>
-            <input type='box' /> This order contains a gift
+            <Subtotal />
           </div>
         </div>
       </div>
