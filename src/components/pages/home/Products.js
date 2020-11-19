@@ -23,7 +23,7 @@ class Products extends Component {
 
         <img src={imageURL} alt='' />
 
-        <button>Add to Basket</button>
+        <button className='btn'>Add to Basket</button>
       </div>
     );
   }
