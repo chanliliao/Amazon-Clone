@@ -146,6 +146,7 @@
   padding: 20px;
   max-height: 400px;
   min-width: 100px;
+  width: 100%;
   background-color: white;
   z-index: 1;
 }
