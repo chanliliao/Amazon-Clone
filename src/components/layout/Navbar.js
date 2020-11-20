@@ -1,11 +1,13 @@
 import React from 'react';
 import '../../App.css';
 import NavbarOption from './NavbarOption';
-import { FaSearch } from 'react-icons/fa';
+import { FaBasketballBall, FaSearch } from 'react-icons/fa';
 import { FaShoppingBasket } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useStateValue } from '../context/StateProvider';
 
 function Navbar() {
+  const [{ basket }, dispatch] = useStateValue();
   return (
     <div className='navbar'>
       <Link to='/'>
@@ -27,7 +29,7 @@ function Navbar() {
         <div className='basket'>
           <FaShoppingBasket color='white' size='2rem' />
           <div className='basket-count'>
-            <h2>0</h2>
+            <h2>{basket?.length}</h2>
           </div>
         </div>
       </Link>
