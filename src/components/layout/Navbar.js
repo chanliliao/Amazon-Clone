@@ -1,13 +1,13 @@
 import React from 'react';
 import '../../App.css';
 import NavbarOption from './NavbarOption';
-import { FaBasketballBall, FaSearch } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
 import { FaShoppingBasket } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../context/StateProvider';
 
 function Navbar() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket }] = useStateValue();
   return (
     <div className='navbar'>
       <Link to='/'>
