@@ -15,8 +15,8 @@ function Payment() {
   const history = useHistory();
 
   const [succeeded, setSucceeded] = useState(false);
-  const [processing, setProcessing] = useState('');
   const [error, setError] = useState(null);
+  const [processing, setProcessing] = useState('');
   const [disabled, setDisabled] = useState(true);
   const [clientSecret, setClientSecret] = useState(true);
 
@@ -32,8 +32,8 @@ function Payment() {
     getClientSecret();
   }, [basket]);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     setProcessing(true);
 
     const payload = await stripe
@@ -51,9 +51,9 @@ function Payment() {
       });
   };
 
-  const handleChange = (e) => {
-    setDisabled(e.empty);
-    setError(e.error ? e.error.messsage : '');
+  const handleChange = (event) => {
+    setDisabled(event.empty);
+    setError(event.error ? event.error.messsage : '');
   };
 
   return (

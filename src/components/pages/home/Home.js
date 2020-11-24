@@ -53,14 +53,14 @@ function Home() {
 
         <div className='product-row'>
           <Product
-            id='5'
+            id='6'
             title='Iphone 12'
             price={999}
             image='https://cdn.dxomark.com/wp-content/uploads/medias/post-61183/iphone-12-pro-blue-hero.jpg'
             rating={5}
           />
           <Product
-            id='5'
+            id='7'
             title='Iphone 12'
             price={999}
             image='https://cdn.dxomark.com/wp-content/uploads/medias/post-61183/iphone-12-pro-blue-hero.jpg'
