@@ -1,0 +1,1 @@
+#Amazon Clone This is a web clone of amazon using React for front-end with different dependencies and express for backend. This also use third party API called strips that allows payments. It has the basic function of adding items to basket, remove items from basket,and checkout using strips. This allows me to learn the basics of react componets and incorpate 3rd part API
