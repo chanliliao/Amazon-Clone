@@ -15,6 +15,16 @@ const Product = ({ id, title, image, price, rating }) => {
         rating: rating,
       },
     });
+    dispatch({
+      type: 'ADD_TO_TEMP',
+      item: {
+        id: id,
+        title: title,
+        image: image,
+        price: price,
+        rating: rating,
+      },
+    });
   };
 
   return (

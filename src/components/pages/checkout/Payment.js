@@ -8,7 +8,7 @@ import { getBasketTotal } from '../../context/reducer';
 import axios from '../checkout/Axios';
 
 function Payment() {
-  const [{ basket }] = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
 
   const stripe = useStripe();
   const elements = useElements();
@@ -46,6 +46,10 @@ function Payment() {
         setSucceeded(true);
         setError(null);
         setProcessing(false);
+
+        dispatch({
+          type: 'EMPTY_BASKET',
+        });
 
         history.replace('/orders');
       });

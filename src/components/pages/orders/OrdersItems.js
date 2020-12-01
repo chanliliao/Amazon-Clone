@@ -1,22 +1,10 @@
 import React from 'react';
 import { useStateValue } from '../../context/StateProvider';
 
-function CheckoutItems({ id, image, title, price, rating }) {
-  const [{ basket }, dispatch] = useStateValue();
-
-  const removeToBasket = () => {
-    dispatch({
-      type: 'REMOVE_FROM_BASKET',
-      id: id,
-    });
-    dispatch({
-      type: 'REMOVE_FROM_TEMP',
-      id: id,
-    });
-  };
-
+function OrdersItems({ id, image, title, price, rating }) {
+  const [{ tempOrder }, dispatch] = useStateValue();
   return (
-    <div className='checkoutItems'>
+    <div className='checkoutItems orderItems'>
       <img className='checkoutItems-img' src={image} alt='' />
       <div className='checkoutItems-info'>
         <p className='checkoutItems-title'>{title}</p>
@@ -31,12 +19,9 @@ function CheckoutItems({ id, image, title, price, rating }) {
               <p>⭐</p>
             ))}
         </p>
-        <button onClick={removeToBasket} className='btn'>
-          Remove from Basket
-        </button>
       </div>
     </div>
   );
 }
 
-export default CheckoutItems;
+export default OrdersItems;

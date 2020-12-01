@@ -306,3 +306,24 @@
 .payment-body {
   flex: 0.8;
 }
+
+/* Orders */
+
+.orders {
+  padding: 20px 80px;
+  text-align: center;
+  background-color: rgb(234, 237, 237);
+}
+
+.orderItems {
+  display: flex;
+  justify-content: center;
+}
+
+.order-items {
+  background-color: white;
+}
+
+.order-title {
+  padding-bottom: 20px;
+}

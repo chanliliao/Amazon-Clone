@@ -4,6 +4,7 @@ import Subnav from './components/layout/Subnav';
 import Home from './components/pages/home/Home';
 import Checkout from './components/pages/checkout/Checkout';
 import Payment from './components/pages/checkout/Payment';
+import Orders from './components/pages/orders/Orders';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
@@ -30,6 +31,9 @@ function App() {
             <Elements stripe={promise}>
               <Payment />
             </Elements>
+          </Route>
+          <Route exact path='/orders'>
+            <Orders />
           </Route>
         </Switch>
       </div>
